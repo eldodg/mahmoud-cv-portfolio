@@ -116,11 +116,11 @@ function App() {
           <p>{t.summary}</p>
 
           <div className="contact-buttons">
-            <a href="https://wa.me/201271619151">
+            <a href="https://wa.me/201111383748">
               WhatsApp
             </a>
 
-            <a href="tel:+201271619151">
+            <a href="tel:+201111383748">
               Phone
             </a>
 
@@ -129,7 +129,7 @@ function App() {
             </a>
 
             <a
-              href="https://mahmoud-elhawary.netlify.app"
+              href="https://mahmoud-cv-portfolio.mahmoud-el-hawary.workers.dev/"
               target="_blank"
               rel="noreferrer"
             >
