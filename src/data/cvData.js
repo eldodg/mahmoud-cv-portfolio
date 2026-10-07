@@ -182,14 +182,14 @@ export const educationData = [
     year: "2015 – 2016",
     titleAr: "الدبلوم العام في علم النفس والاجتماع",
     titleEn: "General Diploma in Psychology & Sociology",
-    institutionAr: "كلية التربية - جامعة كفر الشيخ",
+    institutionAr: "كلية التربية - جامعة طنطا",
     institutionEn: "Faculty of Education - Kafrelsheikh University"
   },
   {
     year: "2008 – 2009",
     titleAr: "بكالوريوس الخدمة الاجتماعية (B.S.W.)",
     titleEn: "Bachelor’s Degree in Social Work (B.S.W.)",
-    institutionAr: "المعهد العالي للخدمة الاجتماعية بكفر الشيخ",
+    institutionAr: "المعهد العالي للخدمة الاجتماعية بورسعيد",
     institutionEn: "Higher Institute of Social Work - Kafrelsheikh"
   }
 ];
