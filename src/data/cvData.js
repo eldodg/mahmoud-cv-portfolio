@@ -162,3 +162,79 @@ export const skills = [
     category: "tech"
   }
 ];
+
+export const educationData = [
+  {
+    year: "2017 – 2018",
+    titleAr: "تمهيدي الماجستير في الصحة النفسية",
+    titleEn: "Pre-Master’s Degree in Mental Health",
+    institutionAr: "كلية التربية - جامعة كفر الشيخ",
+    institutionEn: "Faculty of Education - Kafrelsheikh University"
+  },
+  {
+    year: "2017 – 2018",
+    titleAr: "الدبلوم الخاص في الصحة النفسية",
+    titleEn: "Special Diploma in Mental Health",
+    institutionAr: "كلية التربية - جامعة كفر الشيخ",
+    institutionEn: "Faculty of Education - Kafrelsheikh University"
+  },
+  {
+    year: "2015 – 2016",
+    titleAr: "الدبلوم العام في علم النفس والاجتماع",
+    titleEn: "General Diploma in Psychology & Sociology",
+    institutionAr: "كلية التربية - جامعة كفر الشيخ",
+    institutionEn: "Faculty of Education - Kafrelsheikh University"
+  },
+  {
+    year: "2008 – 2009",
+    titleAr: "بكالوريوس الخدمة الاجتماعية (B.S.W.)",
+    titleEn: "Bachelor’s Degree in Social Work (B.S.W.)",
+    institutionAr: "المعهد العالي للخدمة الاجتماعية بكفر الشيخ",
+    institutionEn: "Higher Institute of Social Work - Kafrelsheikh"
+  }
+];
+
+export const certificationsData = [
+  {
+    category: "education",
+    titleAr: "مدرب محترف معتمد (TOT)",
+    titleEn: "Certified Professional Trainer (TOT)",
+    issuerAr: "جامعة عين شمس - مركز البحوث والشركة المصرية للتدريب",
+    issuerEn: "Ain Shams University & Egyptian Co. for Training"
+  },
+  {
+    category: "education",
+    titleAr: "أخصائي تشخيص وعلاج صعوبات التعلم (تقدير ممتاز)",
+    titleEn: "Learning Disabilities Specialist",
+    issuerAr: "كلية التربية - جامعة كفر الشيخ",
+    issuerEn: "Faculty of Education - Kafrelsheikh University"
+  },
+  {
+    category: "education",
+    titleAr: "أخصائي تأهيل اضطرابات النطق والتخاطب والضعف السمعي",
+    titleEn: "Speech Disorders & Hearing Impairment Specialist",
+    issuerAr: "كلية التربية - جامعة كفر الشيخ",
+    issuerEn: "Faculty of Education - Kafrelsheikh University"
+  },
+  {
+    category: "education",
+    titleAr: "أخصائي تأهيل اضطراب طيف التوحد ASD",
+    titleEn: "Autism Spectrum Disorder (ASD) Specialist",
+    issuerAr: "كلية التربية - جامعة كفر الشيخ",
+    issuerEn: "Faculty of Education - Kafrelsheikh University"
+  },
+  {
+    category: "tech",
+    titleAr: "الرخصة الدولية لقيادة الحاسب الآلي ICDL",
+    titleEn: "ICDL Certification",
+    issuerAr: "مايكروسوفت / اليونسكو",
+    issuerEn: "Microsoft / UNESCO Certified"
+  },
+  {
+    category: "tech",
+    titleAr: "صيانة عتاد وبرمجيات الحاسب الآلي والهواتف الذكية",
+    titleEn: "Computer & Mobile Hardware/Software Maintenance",
+    issuerAr: "أكاديمية سموحة",
+    issuerEn: "Smouha Academy"
+  }
+];

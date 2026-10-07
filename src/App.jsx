@@ -1,5 +1,11 @@
 import { useMemo, useState } from "react";
-import { experiences, projects, skills } from "./data/cvData";
+import {
+  experiences,
+  projects,
+  skills,
+  educationData,
+  certificationsData
+} from "./data/cvData";
 import "./index.css";
 
 function App() {
@@ -111,6 +117,8 @@ function App() {
       timeline: "الخط الزمني للخبرات",
       projects: "المشروعات والحلول",
       skills: "المهارات والكفاءات",
+      academicTitle: "المؤهلات العلمية والأكاديمية",
+      certificationsTitle: "الشهادات والبرامج التدريبية",
       contact: "تواصل معي",
       download: "تحميل السيرة الذاتية",
       details: "التفاصيل",
@@ -128,6 +136,8 @@ function App() {
       timeline: "Professional Timeline",
       projects: "Projects & Solutions",
       skills: "Skills & Competencies",
+      academicTitle: "Academic Credentials",
+      certificationsTitle: "Certifications & Training",
       contact: "Contact Me",
       download: "Download CV",
       details: "Details",
@@ -178,7 +188,7 @@ function App() {
 
             <a href="https://www.linkedin.com/in/eng-elhawary" target="_blank" rel="noreferrer">
               LinkedIn
-             </a>
+            </a>
 
             <a href="https://code4zone.com" target="_blank" rel="noreferrer">
               Portfolio
@@ -233,6 +243,34 @@ function App() {
 
                 <button>{t.details}</button>
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* قسم المؤهلات العلمية والأكاديمية */}
+      <section className="section">
+        <h2>{t.academicTitle}</h2>
+        <div className="grid">
+          {educationData.map((edu, idx) => (
+            <article className="project-card" key={idx}>
+              <span className="project-label">{edu.year}</span>
+              <h3>{isArabic ? edu.titleAr : edu.titleEn}</h3>
+              <p>{isArabic ? edu.institutionAr : edu.institutionEn}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* قسم الشهادات والدورات التدريبية */}
+      <section className="section">
+        <h2>{t.certificationsTitle}</h2>
+        <div className="grid">
+          {certificationsData.map((cert, idx) => (
+            <article className="project-card" key={idx}>
+              <span className="project-label">{cert.category.toUpperCase()}</span>
+              <h3>{isArabic ? cert.titleAr : cert.titleEn}</h3>
+              <p>{isArabic ? cert.issuerAr : cert.issuerEn}</p>
             </article>
           ))}
         </div>
