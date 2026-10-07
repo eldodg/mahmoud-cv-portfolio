@@ -4,7 +4,8 @@ import {
   projects,
   skills,
   educationData,
-  certificationsData
+  certificationsData,
+  galleryCertificates
 } from "./data/cvData";
 import "./index.css";
 
@@ -12,6 +13,7 @@ function App() {
   const [language, setLanguage] = useState("ar");
   const [mode, setMode] = useState("all");
   const [selectedExperience, setSelectedExperience] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // حالات المساعد الذكي
   const [aiQuestion, setAiQuestion] = useState("");
@@ -34,7 +36,6 @@ function App() {
     return skills.filter((item) => item.category === mode);
   }, [mode]);
 
-  // دالة الإجابة الشاملة والتفاعلية للمساعد
   const handleQuery = (query) => {
     if (!query || !query.trim()) return;
     setAiQuestion(query);
@@ -119,6 +120,7 @@ function App() {
       skills: "المهارات والكفاءات",
       academicTitle: "المؤهلات العلمية والأكاديمية",
       certificationsTitle: "الشهادات والبرامج التدريبية",
+      galleryTitle: "معرض الشهادات وشهادات التقدير",
       contact: "تواصل معي",
       download: "تحميل السيرة الذاتية",
       details: "التفاصيل",
@@ -138,6 +140,7 @@ function App() {
       skills: "Skills & Competencies",
       academicTitle: "Academic Credentials",
       certificationsTitle: "Certifications & Training",
+      galleryTitle: "Certificates & Appreciation Gallery",
       contact: "Contact Me",
       download: "Download CV",
       details: "Details",
@@ -276,6 +279,28 @@ function App() {
         </div>
       </section>
 
+      {/* معرض صور الشهادات وشهادات التقدير */}
+      <section className="section">
+        <h2>{t.galleryTitle}</h2>
+        <div className="grid">
+          {galleryCertificates.map((item, idx) => (
+            <article
+              className="project-card gallery-card"
+              key={idx}
+              onClick={() => setSelectedImage(item)}
+            >
+              <span className="project-label">
+                {isArabic ? item.categoryAr : item.categoryEn}
+              </span>
+              <h3>{isArabic ? item.titleAr : item.titleEn}</h3>
+              <div className="gallery-thumb">
+                <img src={item.image} alt={isArabic ? item.titleAr : item.titleEn} />
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section">
         <h2>{t.projects}</h2>
 
@@ -334,7 +359,6 @@ function App() {
           </div>
         </div>
 
-        {/* أزرار الاقتراحات السريعة الشاملة */}
         <div className="quick-topics">
           <button onClick={() => handleQuery(isArabic ? "التربية والخدمة الاجتماعية" : "Social Work")}>
             {isArabic ? "التربية والخدمة الاجتماعية" : "Social Work"}
@@ -375,37 +399,38 @@ function App() {
         <p>© 2026 Mahmoud Mohamed El-Hawary</p>
       </footer>
 
+      {/* نافذة معاينة صورة الشهادة مكبرة */}
+      {selectedImage && (
+        <div className="modal-backdrop" onClick={() => setSelectedImage(null)}>
+          <div className="modal image-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="close" onClick={() => setSelectedImage(null)}>
+              ×
+            </button>
+            <h2>{isArabic ? selectedImage.titleAr : selectedImage.titleEn}</h2>
+            <div className="modal-image-wrap">
+              <img src={selectedImage.image} alt={isArabic ? selectedImage.titleAr : selectedImage.titleEn} />
+            </div>
+            <button onClick={() => setSelectedImage(null)}>{t.close}</button>
+          </div>
+        </div>
+      )}
+
       {selectedExperience && (
         <div className="modal-backdrop">
           <div className="modal">
-            <button
-              className="close"
-              onClick={() => setSelectedExperience(null)}
-            >
+            <button className="close" onClick={() => setSelectedExperience(null)}>
               ×
             </button>
-
             <h2>
-              {isArabic
-                ? selectedExperience.titleAr
-                : selectedExperience.titleEn}
+              {isArabic ? selectedExperience.titleAr : selectedExperience.titleEn}
             </h2>
-
             <p>
-              {isArabic
-                ? selectedExperience.organizationAr
-                : selectedExperience.organizationEn}
+              {isArabic ? selectedExperience.organizationAr : selectedExperience.organizationEn}
             </p>
-
             <p>
-              {isArabic
-                ? selectedExperience.descriptionAr
-                : selectedExperience.descriptionEn}
+              {isArabic ? selectedExperience.descriptionAr : selectedExperience.descriptionEn}
             </p>
-
-            <button onClick={() => setSelectedExperience(null)}>
-              {t.close}
-            </button>
+            <button onClick={() => setSelectedExperience(null)}>{t.close}</button>
           </div>
         </div>
       )}

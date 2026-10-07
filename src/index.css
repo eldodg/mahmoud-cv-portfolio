@@ -515,3 +515,43 @@ footer {
     width: 100%;
   }
 }
+/* تنسيق معرض صور الشهادات */
+.gallery-card {
+  cursor: pointer;
+}
+
+.gallery-thumb {
+  margin-top: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 180px;
+  background: #f1f5f9;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-thumb img {
+  transform: scale(1.05);
+}
+
+.image-modal {
+  width: min(800px, 95%);
+}
+
+.modal-image-wrap {
+  margin: 15px 0;
+  max-height: 70vh;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.modal-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
