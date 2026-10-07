@@ -47,7 +47,7 @@ function App() {
     ) {
       setAiAnswer(
         isArabic
-          ? "تغطي خبرة محمود في مجال الإلكترونيات والتكنولوجيا أكثر من 15 عاماً؛ بدءاً من إدارة الشبكات وصيانة المواقع، مروراً بإدارة وتأسيس مراكز الصيانة، وحتى تأسيس 'Power Center' المتخصص في تصميم وصيانة إلكترونيات القوى، كروت التحكم، وأجهزة Inverters والـ VFD. هل تود الاستفسار عن خدمة هندسية محددة؟"
+          ? "تغطي خبرة محمود في مجال الإلكترونيات والتكنولوجيا أكثر من 15 عاماً؛ بدءاً من إدارة الشبكات وصيانة المواقع، مروراً بإدارة وتأسيس مراكز الصيانة، وحتى تأسيس 'Power Center' المتخصص في تصميم وصيانة الدوائر الإلكترونيه ، كروت التحكم، وأجهزة Inverters والـ VFD. هل تود الاستفسار عن خدمة هندسية محددة؟"
           : "Mahmoud's tech & electronics expertise spans over 15 years, covering network infrastructure, computer systems, and power electronics design/repair at Power Center (inverters, VFDs, and control boards). Would you like to know more about a specific technical solution?"
       );
     } else if (
@@ -60,7 +60,7 @@ function App() {
     ) {
       setAiAnswer(
         isArabic
-          ? "محمود له مسيرة ممتدة بوزارة التربية والتعليم؛ عمل خلالها كأخصائي اجتماعي بالمرحلتين الابتدائية والثانوية، وعضو فني بالتوجيه والإدارة التعليمية، وحالياً يعمل بمدرسة STEM بالإسكندرية حيث يدمج خبرته الاجتماعية بالتقنية لقيادة التحول الرقمي لمكتب التربية الاجتماعية. هل ترغب في الاطلاع على المنظومة الرقمية التي طورها؟"
+          ? "محمود له مسيرة ممتدة بوزارة التربية والتعليم؛ عمل خلالها كأخصائي اجتماعي بالمراحل الثلاثة الابتدائية والاعدادية والثانوية، وعضو فني بالتوجيه والإدارة التعليمية، وحالياً يعمل بمدرسة STEM بالإسكندرية حيث يدمج خبرته الاجتماعية بالتقنية لقيادة التحول الرقمي لمكتب التربية الاجتماعية. هل ترغب في الاطلاع على المنظومة الرقمية التي طورها؟"
           : "Mahmoud has an extensive career with the Ministry of Education as a Social Worker across primary and secondary stages, educational administration, and currently at STEM High School Alexandria, leading digital transformation for student services. Would you like to explore his digital platform?"
       );
     } else if (
@@ -92,7 +92,7 @@ function App() {
     } else {
       setAiAnswer(
         isArabic
-          ? "أهلاً بك! محمود الهواري يجمع بين مجالات متنوعة: الخدمة والتربية الاجتماعية، إلكترونيات القوى والشبكات، وتطوير البرمجيات والذكاء الاصطناعي. يمكنك سؤالي عن: الخبرة الاجتماعية، المنظومة الرقمية، الإلكترونيات، أو الحلول البرمجية!"
+          ? "أهلاً بك! محمود الهواري يجمع بين مجالات متنوعة: الخدمة والتربية الاجتماعية، الدوائر الإلكترونيه والشبكات، وتطوير البرمجيات والذكاء الاصطناعي. يمكنك سؤالي عن: الخبرة الاجتماعية، المنظومة الرقمية، الإلكترونيات، أو الحلول البرمجية!"
           : "Welcome! Mahmoud El-Hawary combines Social Work, Power Electronics & Networks, and Software Development & AI. Feel free to ask about: Social Work Experience, Digital Systems, Electronics, or Software Solutions!"
       );
     }
@@ -102,7 +102,7 @@ function App() {
     ar: {
       title: "محمود محمد الهواري",
       subtitle:
-        "أخصائي أول تربية اجتماعية وتنمية طلابية | خبير حلول البرمجيات وإلكترونيات القوى",
+        "أخصائي أول تربية اجتماعية وتنمية طلابية | خبير حلول البرمجيات و الدوائر الإلكترونيه ",
       summary:
         "مهني متعدد التخصصات يدمج الخبرة العميقة في الخدمة الاجتماعية والإرشاد التربوي مع تطوير البرمجيات، أتمتة الذكاء الاصطناعي، وهندسة الإلكترونيات.",
       education: "التربية والخدمة الاجتماعية",
@@ -168,7 +168,7 @@ function App() {
           <p>{t.summary}</p>
 
           <div className="contact-buttons">
-            <a href="https://wa.me/201111383748" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/201552130669" target="_blank" rel="noreferrer">
               WhatsApp
             </a>
 
@@ -176,11 +176,11 @@ function App() {
 
             <a href="mailto:e.m.elhawary@gmail.com">Email</a>
 
-            <a
-              href="https://mahmoud-cv-portfolio.mahmoud-el-hawary.workers.dev/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://www.linkedin.com/in/eng-elhawary" target="_blank" rel="noreferrer">
+              LinkedIn
+             </a>
+
+            <a href="https://code4zone.com" target="_blank" rel="noreferrer">
               Portfolio
             </a>
           </div>
