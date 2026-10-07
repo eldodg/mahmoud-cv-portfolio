@@ -314,7 +314,7 @@ main {
   background: linear-gradient(90deg, #2563eb, #06b6d4);
 }
 
-/* المساعد الذكي */
+/* تنسيق المساعد الذكي */
 .assistant-box {
   width: min(1180px, calc(100% - 32px));
   margin: 65px auto;
@@ -415,6 +415,7 @@ main {
   background: #f3e8ff;
   border-right: 4px solid #7c3aed;
   color: #4c1d95;
+  line-height: 1.8;
 }
 
 [dir="ltr"] .assistant-response {

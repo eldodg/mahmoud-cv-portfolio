@@ -28,7 +28,7 @@ function App() {
     return skills.filter((item) => item.category === mode);
   }, [mode]);
 
-  // دالة الإجابة الذكية للمساعد
+  // دالة الإجابة الشاملة والتفاعلية للمساعد
   const handleQuery = (query) => {
     if (!query || !query.trim()) return;
     setAiQuestion(query);
@@ -36,56 +36,64 @@ function App() {
     const q = query.toLowerCase();
 
     if (
-      q.includes("inverter") ||
-      q.includes("أنفرتر") ||
+      q.includes("إلكترونيات") ||
+      q.includes("اليكترونيات") ||
+      q.includes("شبكات") ||
       q.includes("انفرتر") ||
-      q.includes("باور") ||
-      q.includes("power")
+      q.includes("أنفرتر") ||
+      q.includes("inverter") ||
+      q.includes("power") ||
+      q.includes("باور")
     ) {
       setAiAnswer(
         isArabic
-          ? "محمود يمتلك خبرة طويلة كمالك ومهندس تنفيذي لمركز POWER CENTER، متخصص في تصميم وصيانة إلكترونيات القوى، كروت التحكم، وتتبع أعطال أجهزة Inverters والـ VFD."
-          : "Mahmoud is the owner and lead engineer at Power Center, specialized in power electronics design, control board troubleshooting, and VFD/Inverter repair."
+          ? "تغطي خبرة محمود في مجال الإلكترونيات والتكنولوجيا أكثر من 15 عاماً؛ بدءاً من إدارة الشبكات وصيانة المواقع، مروراً بإدارة وتأسيس مراكز الصيانة، وحتى تأسيس 'Power Center' المتخصص في تصميم وصيانة إلكترونيات القوى، كروت التحكم، وأجهزة Inverters والـ VFD. هل تود الاستفسار عن خدمة هندسية محددة؟"
+          : "Mahmoud's tech & electronics expertise spans over 15 years, covering network infrastructure, computer systems, and power electronics design/repair at Power Center (inverters, VFDs, and control boards). Would you like to know more about a specific technical solution?"
       );
     } else if (
+      q.includes("تربية") ||
+      q.includes("تعليم") ||
+      q.includes("مدرسة") ||
+      q.includes("وزارة") ||
       q.includes("stem") ||
-      q.includes("ستيم") ||
-      q.includes("مدرسة")
+      q.includes("ستيم")
     ) {
       setAiAnswer(
         isArabic
-          ? "يعمل محمود حالياً كأخصائي اجتماعي ومطور أنظمة رقمية بمدرسة STEM بالإسكندرية، حيث يقود التحول الرقمي لمكتب التربية الاجتماعية وإدارة المنظومة الطلابية."
-          : "Mahmoud currently serves as a Social Specialist & Digital Systems Developer at STEM High School - Alexandria, leading digital transformation for student services."
+          ? "محمود له مسيرة ممتدة بوزارة التربية والتعليم؛ عمل خلالها كأخصائي اجتماعي بالمرحلتين الابتدائية والثانوية، وعضو فني بالتوجيه والإدارة التعليمية، وحالياً يعمل بمدرسة STEM بالإسكندرية حيث يدمج خبرته الاجتماعية بالتقنية لقيادة التحول الرقمي لمكتب التربية الاجتماعية. هل ترغب في الاطلاع على المنظومة الرقمية التي طورها؟"
+          : "Mahmoud has an extensive career with the Ministry of Education as a Social Worker across primary and secondary stages, educational administration, and currently at STEM High School Alexandria, leading digital transformation for student services. Would you like to explore his digital platform?"
       );
     } else if (
+      q.includes("اجتماعي") ||
+      q.includes("إرشاد") ||
+      q.includes("ارشاد") ||
+      q.includes("نفسية") ||
+      q.includes("سلوك") ||
+      q.includes("حالات")
+    ) {
+      setAiAnswer(
+        isArabic
+          ? "بصفته أخصائي اجتماعي أول، يمتلك محمود خبرة عميقة في الإرشاد التربوي والاجتماعي، تعديل السلوك، إدارة الحالات الطلابية، الاتحادات الطلابية، والرعاية النفسية والاجتماعية الشاملة، مع استخدام أدوات رقمية حديثة لمتابعة الحالات. هل تود معرفة منهجية العمل الاجتماعي لديه؟"
+          : "As a Senior Social Worker, Mahmoud specializes in educational counseling, student behavior modification, case management, and student unions, integrated with modern digital tracking tools. Would you like to know more about his social work methodology?"
+      );
+    } else if (
+      q.includes("برمجة") ||
       q.includes("ذكاء") ||
       q.includes("ai") ||
-      q.includes("برمجة") ||
+      q.includes("تطبيق") ||
       q.includes("flutterflow") ||
       q.includes("n8n")
     ) {
       setAiAnswer(
         isArabic
-          ? "يطور محمود تطبيقات الويب والجيل الجديد من الأتمتة باستخدام FlutterFlow وSupabase وn8n وسكريبتات Python وبناء وكلاء الذكاء الاصطناعي (AI Agents)."
-          : "Mahmoud builds web apps and automation workflows using FlutterFlow, Supabase, n8n, Python scripts, and integrated AI Agents."
-      );
-    } else if (
-      q.includes("صحة") ||
-      q.includes("نفسية") ||
-      q.includes("إرشاد") ||
-      q.includes("ارشاد") ||
-      q.includes("اجتماعي")
-    ) {
-      setAiAnswer(
-        isArabic
-          ? "يمتلك محمود خبرة تزيد عن 13 عاماً في الإرشاد النفسي، تعديل السلوك، إدارة الحالات الطلابية، والتوجيه الاجتماعي المباشر والقيادة."
-          : "Mahmoud brings over 13 years of experience in mental health counseling, behavioral intervention, student case management, and educational guidance."
+          ? "يجمع محمود بين البرمجة والأتمتة؛ حيث يطور تطبيقات الويب والمنصات التفاعلية باستخدام FlutterFlow وSupabase، ويستعين بسكريبتات Python وأدوات مثل n8n وبناء وكلاء الذكاء الاصطناعي (AI Agents) لتسهيل وتطوير منظومات العمل. هل تود استكشاف مشروعاته البرمجية؟"
+          : "Mahmoud builds web applications and smart workflow automations using FlutterFlow, Supabase, Python, n8n, and custom AI Agents to streamline complex processes. Would you like to check his featured software projects?"
       );
     } else {
       setAiAnswer(
         isArabic
-          ? "محمود متخصص مجتمعي وتقني يجمع بين التربية الاجتماعية والصحة النفسية وتطوير البرمجيات وإلكترونيات القوى. يمكنك الاستفسار عن: Inverters، STEM، البرمجة، أو الإرشاد النفسي."
-          : "Mahmoud is a multidisciplinary specialist combining social work, mental health, software engineering, and power electronics. Try asking about: Inverters, STEM, AI, or Counseling."
+          ? "أهلاً بك! محمود الهواري يجمع بين مجالات متنوعة: الخدمة والتربية الاجتماعية، إلكترونيات القوى والشبكات، وتطوير البرمجيات والذكاء الاصطناعي. يمكنك سؤالي عن: الخبرة الاجتماعية، المنظومة الرقمية، الإلكترونيات، أو الحلول البرمجية!"
+          : "Welcome! Mahmoud El-Hawary combines Social Work, Power Electronics & Networks, and Software Development & AI. Feel free to ask about: Social Work Experience, Digital Systems, Electronics, or Software Solutions!"
       );
     }
   };
@@ -94,10 +102,10 @@ function App() {
     ar: {
       title: "محمود محمد الهواري",
       subtitle:
-        "أخصائي أول تربية اجتماعية وصحة نفسية | خبير حلول تكنولوجيا المعلومات والإلكترونيات",
+        "أخصائي أول تربية اجتماعية وتنمية طلابية | خبير حلول البرمجيات وإلكترونيات القوى",
       summary:
-        "مهني متعدد المهارات يجمع بين التربية الاجتماعية والصحة النفسية وتطوير البرمجيات والذكاء الاصطناعي والإلكترونيات.",
-      education: "التربية والصحة النفسية",
+        "مهني متعدد التخصصات يدمج الخبرة العميقة في الخدمة الاجتماعية والإرشاد التربوي مع تطوير البرمجيات، أتمتة الذكاء الاصطناعي، وهندسة الإلكترونيات.",
+      education: "التربية والخدمة الاجتماعية",
       tech: "البرمجيات والإلكترونيات",
       all: "كل الخبرات",
       timeline: "الخط الزمني للخبرات",
@@ -111,10 +119,10 @@ function App() {
     en: {
       title: "Mahmoud Mohamed El-Hawary",
       subtitle:
-        "Senior Social Work & Mental Health Specialist | IT Solutions & Electronics Expert",
+        "Senior Social Work & Student Development Specialist | Software & Power Electronics Expert",
       summary:
-        "A multidisciplinary professional combining social work, mental health, software development, AI integration, and electronics expertise.",
-      education: "Education & Mental Health",
+        "A multidisciplinary professional merging extensive social work & counseling experience with software engineering, AI automation, and power electronics.",
+      education: "Social Work & Education",
       tech: "Software & Electronics",
       all: "All Experience",
       timeline: "Professional Timeline",
@@ -221,9 +229,7 @@ function App() {
                   {isArabic ? item.organizationAr : item.organizationEn}
                 </p>
 
-                <p>
-                  {isArabic ? item.descriptionAr : item.descriptionEn}
-                </p>
+                <p>{isArabic ? item.descriptionAr : item.descriptionEn}</p>
 
                 <button>{t.details}</button>
               </div>
@@ -276,7 +282,7 @@ function App() {
         </div>
       </section>
 
-      {/* المساعد الذكي التفاعلي Ask Mahmoud AI */}
+      {/* المساعد الذكي الشامل والتفاعلي Ask Mahmoud AI */}
       <section className="assistant-box">
         <div className="assistant-header">
           <span className="assistant-icon">AI</span>
@@ -284,22 +290,25 @@ function App() {
             <h2>Ask Mahmoud AI</h2>
             <p>
               {isArabic
-                ? "أهلاً بك! أنا المساعد الذكي الخاص بمحمود الهواري. يمكنك سؤالي عن خبراته في STEM، صيانة الـ Inverters، أو حلول البرمجة والصحة النفسية."
-                : "Welcome! I am Mahmoud's AI Assistant. Ask me about his STEM experience, Inverters maintenance, software solutions, or mental health expertise."}
+                ? "أهلاً بك! أنا المساعد الذكي لمحمود الهواري. اسألني عن الخبرة الاجتماعية والتربوية، الإلكترونيات والشبكات، أو البرمجة والذكاء الاصطناعي."
+                : "Welcome! I am Mahmoud's AI Assistant. Ask me about Social Work & Education, Electronics & Networks, or Software & AI Solutions."}
             </p>
           </div>
         </div>
 
+        {/* أزرار الاقتراحات السريعة الشاملة */}
         <div className="quick-topics">
-          <button onClick={() => handleQuery("Inverters")}>Inverters</button>
-          <button onClick={() => handleQuery(isArabic ? "مدرسة STEM" : "STEM School")}>
-            {isArabic ? "مدرسة STEM" : "STEM School"}
+          <button onClick={() => handleQuery(isArabic ? "التربية والخدمة الاجتماعية" : "Social Work")}>
+            {isArabic ? "التربية والخدمة الاجتماعية" : "Social Work"}
           </button>
-          <button onClick={() => handleQuery(isArabic ? "الذكاء الاصطناعي" : "AI Workflow")}>
-            {isArabic ? "الذكاء الاصطناعي" : "AI Workflow"}
+          <button onClick={() => handleQuery(isArabic ? "قطاع التعليم والمدارس" : "Education Sector")}>
+            {isArabic ? "قطاع التعليم والمدارس" : "Education Sector"}
           </button>
-          <button onClick={() => handleQuery(isArabic ? "الصحة النفسية" : "Mental Health")}>
-            {isArabic ? "الصحة النفسية" : "Mental Health"}
+          <button onClick={() => handleQuery(isArabic ? "الإلكترونيات والشبكات" : "Electronics & Networks")}>
+            {isArabic ? "الإلكترونيات والشبكات" : "Electronics & Networks"}
+          </button>
+          <button onClick={() => handleQuery(isArabic ? "تطوير البرمجيات والذكاء الاصطناعي" : "Software & AI")}>
+            {isArabic ? "تطوير البرمجيات والذكاء الاصطناعي" : "Software & AI"}
           </button>
         </div>
 
