@@ -15,26 +15,13 @@
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(
-      circle at top right,
-      #dbeafe 0,
-      transparent 32%
-    ),
-    #f6f8fc;
+  background: radial-gradient(circle at top right, #dbeafe 0, transparent 32%), #f6f8fc;
 }
 
 button,
 a {
   font: inherit;
-}
-
-button,
-a {
   cursor: pointer;
-}
-
-a {
   text-decoration: none;
 }
 
@@ -105,12 +92,7 @@ main {
   align-items: center;
   border-radius: 34px;
   color: white;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(15, 23, 42, 0.97),
-      rgba(30, 64, 175, 0.92)
-    );
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.97), rgba(30, 64, 175, 0.92));
   box-shadow: 0 25px 70px rgba(30, 64, 175, 0.22);
 }
 
@@ -227,7 +209,6 @@ main {
 .card,
 .project-card,
 .skill,
-.assistant,
 .modal {
   border: 1px solid #e2e8f0;
   border-radius: 24px;
@@ -235,7 +216,8 @@ main {
   box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
 }
 
-.card {
+.card,
+.project-card {
   padding: 24px;
   transition: 0.2s ease;
 }
@@ -275,11 +257,6 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-}
-
-.project-card {
-  padding: 24px;
-  transition: 0.2s ease;
 }
 
 .project-label {
@@ -337,29 +314,22 @@ main {
   background: linear-gradient(90deg, #2563eb, #06b6d4);
 }
 
-.assistant {
+/* المساعد الذكي */
+.assistant-box {
   width: min(1180px, calc(100% - 32px));
   margin: 65px auto;
-  padding: 22px;
+  padding: 28px;
+  border-radius: 24px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+.assistant-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
-
-.assistant > div {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.assistant h2,
-.assistant p {
-  margin: 0;
-}
-
-.assistant p {
-  color: #64748b;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .assistant-icon {
@@ -371,14 +341,85 @@ main {
   color: white;
   background: #7c3aed;
   font-weight: 800;
+  flex-shrink: 0;
 }
 
-.assistant button {
-  border: 0;
-  border-radius: 12px;
-  padding: 12px 18px;
+.assistant-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.assistant-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.quick-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.quick-topics button {
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.quick-topics button:hover {
+  background: #2563eb;
   color: white;
+  border-color: #2563eb;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 12px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.chat-input-area input:focus {
+  border-color: #7c3aed;
+}
+
+.chat-input-area button {
+  border: 0;
   background: #7c3aed;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.assistant-response {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f3e8ff;
+  border-right: 4px solid #7c3aed;
+  color: #4c1d95;
+}
+
+[dir="ltr"] .assistant-response {
+  border-right: 0;
+  border-left: 4px solid #7c3aed;
 }
 
 footer {
@@ -465,12 +506,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .assistant {
-    align-items: stretch;
+  .chat-input-area {
     flex-direction: column;
   }
 
-  .assistant button {
+  .chat-input-area button {
     width: 100%;
   }
 }
